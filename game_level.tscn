@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://b4ob576fhpvnc"]
+
+[ext_resource type="Script" uid="uid://bfd3q5asmvie" path="res://scripts/game_level.gd" id="1_5d4hl"]
+[ext_resource type="Script" uid="uid://p5lt8gnfexb5" path="res://scripts/background.gd" id="1_jpbmx"]
+[ext_resource type="Texture2D" uid="uid://ch7hr0ua8kpn5" path="res://assets/backgrounds/background1.png" id="2_5d4hl"]
+[ext_resource type="Texture2D" uid="uid://c3epb1fpp5vwf" path="res://assets/backgrounds/background2.png" id="3_dv4fs"]
+[ext_resource type="Texture2D" uid="uid://cdpmvcfk5pqch" path="res://assets/trampoline (1).png" id="4_vugdd"]
+[ext_resource type="Script" uid="uid://cvmnpugs4fgpu" path="res://scripts/player.gd" id="5_gm1p2"]
+[ext_resource type="Texture2D" uid="uid://ccs17xou1howm" path="res://assets/players/Godot Game Assets (1).png" id="6_qsxfn"]
+[ext_resource type="Script" uid="uid://dkyck0lj0jmny" path="res://scripts/lasers.gd" id="7_anq5l"]
+[ext_resource type="Texture2D" uid="uid://csnnv2b4s5bs0" path="res://assets/danger.png" id="8_3ktkq"]
+[ext_resource type="Texture2D" uid="uid://b2nl57knnd72e" path="res://assets/players/godot player2.png" id="8_qsxfn"]
+[ext_resource type="Texture2D" uid="uid://2ew55jy7nkpu" path="res://assets/players/godot player3.png" id="9_anq5l"]
+[ext_resource type="Texture2D" uid="uid://cn2t3dvhdb4oh" path="res://assets/laser.png" id="9_gyjtv"]
+[ext_resource type="Texture2D" uid="uid://xyqdur5vhadj" path="res://assets/players/godot player4.png" id="10_3ktkq"]
+[ext_resource type="Texture2D" uid="uid://cc1dyjtc5bw3f" path="res://assets/laser (2).png" id="10_ssom1"]
+[ext_resource type="Texture2D" uid="uid://bl80y3unj05ln" path="res://assets/players/godot player5.png" id="11_gyjtv"]
+[ext_resource type="Texture2D" uid="uid://bxi3b80pup065" path="res://assets/godot freezetimer.png" id="16_3ktkq"]
+[ext_resource type="Script" uid="uid://dxero6m2lypla" path="res://freeze_timer.gd" id="17_gyjtv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emgcl"]
+size = Vector2(1181.5, 136)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tj1nq"]
+radius = 41.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyxg5"]
+size = Vector2(58.5, 675.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whhu8"]
+size = Vector2(1184, 19)
+
+[node name="gameLevel" type="Node2D" unique_id=1329617218]
+script = ExtResource("1_5d4hl")
+
+[node name="Background" type="Area2D" parent="." unique_id=2022900891]
+script = ExtResource("1_jpbmx")
+
+[node name="BG1" type="Sprite2D" parent="Background" unique_id=1077200112]
+position = Vector2(584, 306)
+scale = Vector2(1.5936279, 1.3236111)
+texture = ExtResource("2_5d4hl")
+
+[node name="BG2" type="Sprite2D" parent="Background" unique_id=645691471]
+visible = false
+position = Vector2(584, 306)
+scale = Vector2(1.594, 1.324)
+texture = ExtResource("3_dv4fs")
+
+[node name="Trampoline" type="Area2D" parent="." unique_id=1516389650]
+
+[node name="Sprite2D" type="Sprite2D" parent="Trampoline" unique_id=2060472734]
+position = Vector2(579.5, 585.3083)
+scale = Vector2(1.44625, 1.3799654)
+texture = ExtResource("4_vugdd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trampoline" unique_id=665694818]
+position = Vector2(581.25, 594)
+shape = SubResource("RectangleShape2D_emgcl")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1320809321 groups=["player"]]
+position = Vector2(580, 427)
+script = ExtResource("5_gm1p2")
+
+[node name="player1" type="Sprite2D" parent="Player" unique_id=1358102747]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_qsxfn")
+
+[node name="player2" type="Sprite2D" parent="Player" unique_id=1589992473]
+visible = false
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_qsxfn")
+
+[node name="player3" type="Sprite2D" parent="Player" unique_id=1223927737]
+visible = false
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_anq5l")
+
+[node name="player4" type="Sprite2D" parent="Player" unique_id=385870144]
+visible = false
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_3ktkq")
+
+[node name="player5" type="Sprite2D" parent="Player" unique_id=1191608569]
+visible = false
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_gyjtv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1935033320]
+shape = SubResource("CircleShape2D_tj1nq")
+
+[node name="leftWall" type="Area2D" parent="." unique_id=1630887012]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftWall" unique_id=1741712891]
+position = Vector2(-28.75, 323.25)
+shape = SubResource("RectangleShape2D_yyxg5")
+
+[node name="rightWall" type="Area2D" parent="." unique_id=2135152893]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightWall" unique_id=1949057814]
+position = Vector2(1182, 323)
+shape = SubResource("RectangleShape2D_yyxg5")
+
+[node name="Lasers" type="Area2D" parent="." unique_id=935459393]
+script = ExtResource("7_anq5l")
+
+[node name="warning" type="Sprite2D" parent="Lasers" unique_id=1057233246]
+visible = false
+modulate = Color(0.23137255, 0.7294118, 0.25882354, 1)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_3ktkq")
+
+[node name="laser" type="Sprite2D" parent="Lasers" unique_id=716842411]
+visible = false
+scale = Vector2(1.21, 1.21)
+texture = ExtResource("9_gyjtv")
+region_enabled = true
+region_rect = Rect2(0, 0, 958, 102.56529)
+
+[node name="arrow" type="Sprite2D" parent="Lasers" unique_id=746296101]
+visible = false
+position = Vector2(-3.0349617, 68.615585)
+rotation = 1.5707964
+scale = Vector2(0.31789115, 0.3037751)
+texture = ExtResource("10_ssom1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasers" unique_id=676885479]
+position = Vector2(3, -2)
+shape = SubResource("RectangleShape2D_whhu8")
+
+[node name="FreezeTimer" type="Sprite2D" parent="." unique_id=1579187844]
+visible = false
+position = Vector2(581.00006, 385.00003)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_3ktkq")
+script = ExtResource("17_gyjtv")
+
+[node name="Label" type="Label" parent="FreezeTimer" unique_id=1394578598]
+offset_left = -34.285736
+offset_top = -34.285706
+offset_right = 35.714264
+offset_bottom = 33.714294
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 49
+text = "5.3"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Trampoline" to="Player" method="_on_trampoline_body_entered"]
+[connection signal="body_exited" from="Trampoline" to="Player" method="_on_trampoline_body_exited"]
+[connection signal="body_entered" from="leftWall" to="Player" method="_on_left_wall_body_entered"]
+[connection signal="body_exited" from="leftWall" to="Player" method="_on_left_wall_body_exited"]
+[connection signal="body_entered" from="rightWall" to="Player" method="_on_right_wall_body_entered"]
+[connection signal="body_exited" from="rightWall" to="Player" method="_on_right_wall_body_exited"]
+[connection signal="body_entered" from="Lasers" to="Player" method="_on_lasers_body_entered"]

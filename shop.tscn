@@ -1,0 +1,292 @@
+[gd_scene format=3 uid="uid://8mui6uu2e132"]
+
+[ext_resource type="Texture2D" uid="uid://bpp3fpd6pdfex" path="res://assets/shop/godot shop plan.png" id="1_viryw"]
+[ext_resource type="Script" uid="uid://dxnmoeq0lc5w1" path="res://scripts/shop.gd" id="1_xqmyw"]
+[ext_resource type="Texture2D" uid="uid://d2siydohwfsoy" path="res://assets/shop/godot double jump.png" id="2_p5a0g"]
+[ext_resource type="Texture2D" uid="uid://bi4rqiykxa85v" path="res://assets/shop/godot slam.png" id="3_xqmyw"]
+[ext_resource type="Texture2D" uid="uid://crcku604q8772" path="res://assets/shop/godot freez.png" id="4_sw5c6"]
+[ext_resource type="Texture2D" uid="uid://cy8cqe1mfspyg" path="res://assets/shop/godot regen.png" id="5_msgp6"]
+[ext_resource type="Texture2D" uid="uid://wlii18u0wkry" path="res://assets/shop/godot upgrade icon.png" id="6_e23gp"]
+[ext_resource type="Texture2D" uid="uid://b1si08frsuuyv" path="res://assets/shop/godot continue button.png" id="7_rrolr"]
+[ext_resource type="Texture2D" uid="uid://c4677kc6yg7hl" path="res://assets/shop/godot restart button.png" id="8_gldgk"]
+[ext_resource type="Texture2D" uid="uid://bqp57t16voaj8" path="res://assets/shop/godot restart confirm button.png" id="9_xqmyw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yyxg5"]
+radius = 54.00926
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtxfs"]
+radius = 31.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgndy"]
+size = Vector2(237.5, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5a0g"]
+size = Vector2(230.78125, 37.5)
+
+[node name="shop" type="Node2D" unique_id=2033775728]
+script = ExtResource("1_xqmyw")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=669212982]
+position = Vector2(576, 324)
+scale = Vector2(1.1999999, 1.2)
+texture = ExtResource("1_viryw")
+
+[node name="doubleJump" type="Area2D" parent="." unique_id=2023752841]
+
+[node name="Sprite2D" type="Sprite2D" parent="doubleJump" unique_id=1583812894]
+position = Vector2(853.00006, 164)
+scale = Vector2(1.09466, 1.0946603)
+texture = ExtResource("2_p5a0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doubleJump" unique_id=1549647739]
+position = Vector2(853, 164)
+shape = SubResource("CircleShape2D_yyxg5")
+
+[node name="price" type="Label" parent="doubleJump" unique_id=1082582705]
+offset_left = 802.0
+offset_top = 209.0
+offset_right = 899.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "10 points"
+
+[node name="slam" type="Area2D" parent="." unique_id=290373958]
+
+[node name="Sprite2D" type="Sprite2D" parent="slam" unique_id=2077776620]
+position = Vector2(852.61707, 288.60156)
+scale = Vector2(1.0756973, 1.0756978)
+texture = ExtResource("3_xqmyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slam" unique_id=1409764004]
+position = Vector2(853, 288)
+shape = SubResource("CircleShape2D_yyxg5")
+
+[node name="price" type="Label" parent="slam" unique_id=1799966940]
+offset_left = 802.0
+offset_top = 332.0
+offset_right = 899.0
+offset_bottom = 363.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "20 points"
+
+[node name="freeze" type="Area2D" parent="." unique_id=588826365]
+
+[node name="Sprite2D" type="Sprite2D" parent="freeze" unique_id=1121976066]
+position = Vector2(852.61707, 412.60156)
+scale = Vector2(1.0756973, 1.0756978)
+texture = ExtResource("4_sw5c6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="freeze" unique_id=1668978141]
+position = Vector2(852, 412)
+shape = SubResource("CircleShape2D_yyxg5")
+
+[node name="price" type="Label" parent="freeze" unique_id=958167434]
+offset_left = 802.0
+offset_top = 463.0
+offset_right = 899.0
+offset_bottom = 494.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "40 points"
+
+[node name="regen" type="Area2D" parent="." unique_id=1159717914]
+
+[node name="Sprite2D" type="Sprite2D" parent="regen" unique_id=1442232676]
+position = Vector2(852.6171, 547.60156)
+scale = Vector2(1.0756973, 1.0756978)
+texture = ExtResource("5_msgp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="regen" unique_id=1189769958]
+position = Vector2(853, 547)
+shape = SubResource("CircleShape2D_yyxg5")
+
+[node name="price" type="Label" parent="regen" unique_id=1048083085]
+offset_left = 802.0
+offset_top = 594.0
+offset_right = 899.0
+offset_bottom = 625.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "40 points"
+
+[node name="coinSpawnRate" type="Area2D" parent="." unique_id=1561767523]
+
+[node name="Sprite2D" type="Sprite2D" parent="coinSpawnRate" unique_id=768608272]
+position = Vector2(532, 141)
+scale = Vector2(0.6279197, 0.62792)
+texture = ExtResource("6_e23gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coinSpawnRate" unique_id=321589585]
+position = Vector2(532, 141)
+shape = SubResource("CircleShape2D_jtxfs")
+
+[node name="upgradeDisplay" type="Label" parent="coinSpawnRate" unique_id=1421292388]
+offset_left = 575.0
+offset_top = 122.0
+offset_right = 726.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 26
+text = "0.5/second"
+
+[node name="price" type="Label" parent="coinSpawnRate" unique_id=1321623845]
+offset_left = 482.0
+offset_top = 166.0
+offset_right = 579.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "5 points"
+
+[node name="goldCoinChance" type="Area2D" parent="." unique_id=2106429166]
+
+[node name="Sprite2D" type="Sprite2D" parent="goldCoinChance" unique_id=515980740]
+position = Vector2(532, 264)
+scale = Vector2(0.6279197, 0.62792)
+texture = ExtResource("6_e23gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goldCoinChance" unique_id=1808011942]
+position = Vector2(532, 264)
+shape = SubResource("CircleShape2D_jtxfs")
+
+[node name="upgradeDisplay" type="Label" parent="goldCoinChance" unique_id=591206184]
+offset_left = 575.0
+offset_top = 246.0
+offset_right = 726.0
+offset_bottom = 282.0
+theme_override_font_sizes/font_size = 26
+text = "0% chance"
+
+[node name="price" type="Label" parent="goldCoinChance" unique_id=1254295615]
+offset_left = 482.0
+offset_top = 290.0
+offset_right = 579.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "5 points"
+
+[node name="freezeDuration" type="Area2D" parent="." unique_id=1617788284]
+
+[node name="Sprite2D" type="Sprite2D" parent="freezeDuration" unique_id=190093292]
+position = Vector2(532, 393)
+scale = Vector2(0.6279197, 0.62792)
+texture = ExtResource("6_e23gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="freezeDuration" unique_id=2122021115]
+position = Vector2(532, 393)
+shape = SubResource("CircleShape2D_jtxfs")
+
+[node name="upgradeDisplay" type="Label" parent="freezeDuration" unique_id=1193381416]
+offset_left = 575.0
+offset_top = 372.0
+offset_right = 726.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 26
+text = "1 second"
+
+[node name="price" type="Label" parent="freezeDuration" unique_id=619159983]
+offset_left = 482.0
+offset_top = 417.0
+offset_right = 579.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "5 points"
+
+[node name="bossfightMaxHealth" type="Area2D" parent="." unique_id=587956466]
+
+[node name="Sprite2D" type="Sprite2D" parent="bossfightMaxHealth" unique_id=1646149537]
+position = Vector2(532, 529)
+scale = Vector2(0.6279197, 0.62792)
+texture = ExtResource("6_e23gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bossfightMaxHealth" unique_id=109306688]
+position = Vector2(532, 529)
+shape = SubResource("CircleShape2D_jtxfs")
+
+[node name="upgradeDisplay" type="Label" parent="bossfightMaxHealth" unique_id=802707128]
+offset_left = 575.0
+offset_top = 508.0
+offset_right = 726.0
+offset_bottom = 544.0
+theme_override_font_sizes/font_size = 26
+text = "100 health"
+
+[node name="price" type="Label" parent="bossfightMaxHealth" unique_id=191225191]
+offset_left = 482.0
+offset_top = 553.0
+offset_right = 579.0
+offset_bottom = 584.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "5 points"
+
+[node name="nextRound" type="Area2D" parent="." unique_id=478777238]
+
+[node name="Sprite2D" type="Sprite2D" parent="nextRound" unique_id=164966643]
+position = Vector2(170.12863, 540)
+scale = Vector2(1.2245499, 1.1436166)
+texture = ExtResource("7_rrolr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nextRound" unique_id=590373868]
+position = Vector2(170.25, 540)
+shape = SubResource("RectangleShape2D_mgndy")
+
+[node name="restart" type="Area2D" parent="." unique_id=821331494]
+
+[node name="confirmButton" type="Sprite2D" parent="restart" unique_id=1494052520]
+visible = false
+position = Vector2(169.15286, 411.54654)
+scale = Vector2(0.7162319, 0.71623206)
+texture = ExtResource("9_xqmyw")
+
+[node name="button" type="Sprite2D" parent="restart" unique_id=1545499643]
+position = Vector2(169.15286, 411.54654)
+scale = Vector2(0.7162319, 0.71623206)
+texture = ExtResource("8_gldgk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="restart" unique_id=1028283029]
+position = Vector2(169.39063, 411.75)
+shape = SubResource("RectangleShape2D_p5a0g")
+
+[node name="Label" type="Label" parent="restart" unique_id=778809715]
+visible = false
+offset_left = 238.0
+offset_top = 393.0
+offset_right = 278.0
+offset_bottom = 428.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "3"
+
+[node name="pointDisplay" type="Label" parent="." unique_id=463029969]
+offset_left = 86.0
+offset_top = 181.0
+offset_right = 249.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "Points: 0"
+
+[connection signal="mouse_entered" from="doubleJump" to="." method="_on_double_jump_mouse_entered"]
+[connection signal="mouse_exited" from="doubleJump" to="." method="_on_double_jump_mouse_exited"]
+[connection signal="mouse_entered" from="slam" to="." method="_on_slam_mouse_entered"]
+[connection signal="mouse_exited" from="slam" to="." method="_on_slam_mouse_exited"]
+[connection signal="mouse_entered" from="freeze" to="." method="_on_freeze_mouse_entered"]
+[connection signal="mouse_exited" from="freeze" to="." method="_on_freeze_mouse_exited"]
+[connection signal="mouse_entered" from="regen" to="." method="_on_regen_mouse_entered"]
+[connection signal="mouse_exited" from="regen" to="." method="_on_regen_mouse_exited"]
+[connection signal="mouse_entered" from="coinSpawnRate" to="." method="_on_coin_spawn_rate_mouse_entered"]
+[connection signal="mouse_exited" from="coinSpawnRate" to="." method="_on_coin_spawn_rate_mouse_exited"]
+[connection signal="mouse_entered" from="goldCoinChance" to="." method="_on_gold_coin_chance_mouse_entered"]
+[connection signal="mouse_exited" from="goldCoinChance" to="." method="_on_gold_coin_chance_mouse_exited"]
+[connection signal="mouse_entered" from="freezeDuration" to="." method="_on_freeze_duration_mouse_entered"]
+[connection signal="mouse_exited" from="freezeDuration" to="." method="_on_freeze_duration_mouse_exited"]
+[connection signal="mouse_entered" from="bossfightMaxHealth" to="." method="_on_bossfight_max_health_mouse_entered"]
+[connection signal="mouse_exited" from="bossfightMaxHealth" to="." method="_on_bossfight_max_health_mouse_exited"]
+[connection signal="mouse_entered" from="nextRound" to="." method="_on_next_round_mouse_entered"]
+[connection signal="mouse_exited" from="nextRound" to="." method="_on_next_round_mouse_exited"]
+[connection signal="mouse_entered" from="restart" to="." method="_on_restart_mouse_entered"]
+[connection signal="mouse_exited" from="restart" to="." method="_on_restart_mouse_exited"]

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://buliek7js4qsx"]
+
+[ext_resource type="Script" uid="uid://dsrv0t1xq15qr" path="res://scripts/main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://n5e0724dudxr" path="res://game_gui.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b1ihwfomqauoc" path="res://start_menu.tscn" id="15_vivmo"]
+
+[node name="main" type="Node2D" unique_id=1077060002]
+script = ExtResource("1_1bvp3")
+
+[node name="startMenu" parent="." unique_id=46085361 instance=ExtResource("15_vivmo")]
+
+[node name="gameGUI" parent="." unique_id=423937686 instance=ExtResource("3_h2yge")]

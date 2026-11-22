@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://n5e0724dudxr"]
+
+[ext_resource type="Script" uid="uid://8g5gdv7d5nku" path="res://scripts/game_gui.gd" id="1_rj0yu"]
+[ext_resource type="Texture2D" uid="uid://bxi3b80pup065" path="res://assets/godot freezetimer.png" id="2_3hg37"]
+[ext_resource type="Texture2D" uid="uid://dfjx8imhp7oq4" path="res://assets/godot slam cooldown.png" id="2_7jjhd"]
+
+[node name="gameGUI" type="CanvasLayer" unique_id=423937686]
+script = ExtResource("1_rj0yu")
+
+[node name="LevelDisplay" type="Label" parent="." unique_id=273098713]
+offset_left = 949.0
+offset_top = 6.0
+offset_right = 1138.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 33
+text = "Level: 10/10"
+
+[node name="PointsDisplay" type="Label" parent="." unique_id=1969815567]
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 153.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 33
+text = "Points: 1000"
+
+[node name="SlamCooldown" type="Sprite2D" parent="." unique_id=869807353]
+position = Vector2(1090, 579)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_7jjhd")
+
+[node name="Label" type="Label" parent="SlamCooldown" unique_id=1363915908]
+offset_left = -34.285736
+offset_top = -34.285706
+offset_right = 35.714264
+offset_bottom = 33.714294
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 49
+text = "5.3"
+
+[node name="FreezeCooldown" type="Sprite2D" parent="." unique_id=2032556488]
+modulate = Color(0.74509805, 1, 1, 1)
+position = Vector2(994, 579)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_3hg37")
+
+[node name="Label" type="Label" parent="FreezeCooldown" unique_id=1515469349]
+offset_left = -34.285736
+offset_top = -34.285706
+offset_right = 35.714264
+offset_bottom = 33.714294
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 49
+text = "5.3"

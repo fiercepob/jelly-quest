@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://b1ihwfomqauoc"]
+
+[ext_resource type="Texture2D" uid="uid://emr54a276irt" path="res://assets/menu/backgroundmenu (2).png" id="1_ia0g5"]
+[ext_resource type="Script" uid="uid://ypufehx6hmqw" path="res://scripts/start_menu.gd" id="1_vpdu5"]
+[ext_resource type="Texture2D" uid="uid://cmrv5pjrnq1ld" path="res://assets/menu/play button.png" id="2_vpdu5"]
+[ext_resource type="Texture2D" uid="uid://b42kklmljcoli" path="res://assets/menu/godot playerselect arrow.png" id="4_ctwoq"]
+[ext_resource type="Texture2D" uid="uid://ccs17xou1howm" path="res://assets/players/Godot Game Assets (1).png" id="5_ppfnh"]
+[ext_resource type="Script" uid="uid://cakx5a8fl4is5" path="res://scripts/playerSelectorIcon.gd" id="5_xsckg"]
+[ext_resource type="Texture2D" uid="uid://b2nl57knnd72e" path="res://assets/players/godot player2.png" id="6_73a2t"]
+[ext_resource type="Texture2D" uid="uid://2ew55jy7nkpu" path="res://assets/players/godot player3.png" id="7_xsckg"]
+[ext_resource type="Texture2D" uid="uid://xyqdur5vhadj" path="res://assets/players/godot player4.png" id="8_gfl6h"]
+[ext_resource type="Texture2D" uid="uid://bl80y3unj05ln" path="res://assets/players/godot player5.png" id="9_kefd2"]
+[ext_resource type="Texture2D" uid="uid://cybs7d0jorabn" path="res://assets/menu/godot tutorial button.png" id="11_gfl6h"]
+[ext_resource type="Texture2D" uid="uid://tv6c1meusku0" path="res://assets/menu/godot credits button.png" id="12_kefd2"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ctwoq"]
+points = PackedVector2Array(69, 42, 0, 84, 0, 0)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_acoh7"]
+points = PackedVector2Array(-70, 42, 0, 84, 0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05c30"]
+size = Vector2(254, 94.5)
+
+[node name="startMenu" type="Node2D" unique_id=46085361]
+script = ExtResource("1_vpdu5")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1443701657]
+position = Vector2(584.6667, 325.5)
+scale = Vector2(1.238889, 1.2388889)
+texture = ExtResource("1_ia0g5")
+
+[node name="playButton" type="Sprite2D" parent="." unique_id=1114377701]
+position = Vector2(578.00006, 358.00003)
+scale = Vector2(0.83156025, 0.79787236)
+texture = ExtResource("2_vpdu5")
+
+[node name="nextPlayer" type="Area2D" parent="." unique_id=6887600]
+
+[node name="Sprite2D" type="Sprite2D" parent="nextPlayer" unique_id=1966072881]
+position = Vector2(723.00006, 530)
+scale = Vector2(0.5307692, 0.5307692)
+texture = ExtResource("4_ctwoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nextPlayer" unique_id=402014728]
+position = Vector2(690, 488)
+shape = SubResource("ConvexPolygonShape2D_ctwoq")
+
+[node name="previousPlayer" type="Area2D" parent="." unique_id=821010399]
+
+[node name="Sprite2D" type="Sprite2D" parent="previousPlayer" unique_id=812799748]
+position = Vector2(445.00012, 530.00006)
+scale = Vector2(0.5307692, 0.5307692)
+texture = ExtResource("4_ctwoq")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="previousPlayer" unique_id=943207249]
+position = Vector2(478, 488)
+shape = SubResource("ConvexPolygonShape2D_acoh7")
+
+[node name="playerSelectorIcon" type="Area2D" parent="." unique_id=1246901556]
+script = ExtResource("5_xsckg")
+
+[node name="player1" type="Sprite2D" parent="playerSelectorIcon" unique_id=394852191]
+position = Vector2(585, 526)
+scale = Vector2(0.6847828, 0.68478286)
+texture = ExtResource("5_ppfnh")
+
+[node name="player2" type="Sprite2D" parent="playerSelectorIcon" unique_id=608635836]
+visible = false
+position = Vector2(585, 526)
+scale = Vector2(0.6847828, 0.68478286)
+texture = ExtResource("6_73a2t")
+
+[node name="player3" type="Sprite2D" parent="playerSelectorIcon" unique_id=1023732218]
+visible = false
+position = Vector2(585, 526)
+scale = Vector2(0.6847828, 0.68478286)
+texture = ExtResource("7_xsckg")
+
+[node name="player4" type="Sprite2D" parent="playerSelectorIcon" unique_id=1983258353]
+visible = false
+position = Vector2(585, 526)
+scale = Vector2(0.6847828, 0.68478286)
+texture = ExtResource("8_gfl6h")
+
+[node name="player5" type="Sprite2D" parent="playerSelectorIcon" unique_id=1385711370]
+visible = false
+position = Vector2(585, 526)
+scale = Vector2(0.6847828, 0.68478286)
+texture = ExtResource("9_kefd2")
+
+[node name="tutorialButton" type="Area2D" parent="." unique_id=2038942553]
+
+[node name="Sprite2D" type="Sprite2D" parent="tutorialButton" unique_id=1233860070]
+position = Vector2(187.83435, 461.86346)
+scale = Vector2(1.0532637, 1.0532637)
+texture = ExtResource("11_gfl6h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorialButton" unique_id=1725430807]
+position = Vector2(185, 459.75)
+shape = SubResource("RectangleShape2D_05c30")
+
+[node name="creditsButton" type="Area2D" parent="." unique_id=591350060]
+
+[node name="Sprite2D" type="Sprite2D" parent="creditsButton" unique_id=1764346986]
+position = Vector2(970.8343, 461.86346)
+scale = Vector2(1.0532637, 1.0532637)
+texture = ExtResource("12_kefd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="creditsButton" unique_id=467190124]
+position = Vector2(967, 459.75)
+shape = SubResource("RectangleShape2D_05c30")
+
+[connection signal="mouse_entered" from="nextPlayer" to="." method="_on_next_player_mouse_entered"]
+[connection signal="mouse_exited" from="nextPlayer" to="." method="_on_next_player_mouse_exited"]
+[connection signal="mouse_entered" from="previousPlayer" to="." method="_on_previous_player_mouse_entered"]
+[connection signal="mouse_exited" from="previousPlayer" to="." method="_on_previous_player_mouse_exited"]

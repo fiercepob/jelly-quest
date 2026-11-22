@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ld7jm5imfomk"]
+
+[ext_resource type="Texture2D" uid="uid://bwpivr6vrremc" path="res://assets/shop/godot sold button.png" id="1_i6cqt"]
+
+[node name="shopSold" type="Node2D" unique_id=1489149416]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1715195816]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_i6cqt")

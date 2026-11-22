@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://qlm0gh0gullu"]
+
+[ext_resource type="Script" uid="uid://tee81020w6oy" path="res://scripts/point.gd" id="1_c0ia7"]
+[ext_resource type="Script" uid="uid://dkmu4rigivgqq" path="res://scripts/1_point.gd" id="2_4wahx"]
+[ext_resource type="Texture2D" uid="uid://cx74qnmnmjgn4" path="res://assets/Godot 1 points.png" id="3_4wahx"]
+[ext_resource type="Script" uid="uid://jhix8gmrsj8x" path="res://scripts/4_point.gd" id="4_7344p"]
+[ext_resource type="Texture2D" uid="uid://drxcucge3o10b" path="res://assets/Godot 1 points (1).png" id="5_7344p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yyxg5"]
+radius = 21.0
+
+[node name="point" type="Node2D" unique_id=346262802]
+script = ExtResource("1_c0ia7")
+
+[node name="1Point" type="Area2D" parent="." unique_id=1158161181]
+script = ExtResource("2_4wahx")
+
+[node name="Sprite2D" type="Sprite2D" parent="1Point" unique_id=1047587052]
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_4wahx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1Point" unique_id=1105534885]
+shape = SubResource("CircleShape2D_yyxg5")
+
+[node name="4Point" type="Area2D" parent="." unique_id=824974558]
+script = ExtResource("4_7344p")
+
+[node name="Sprite2D" type="Sprite2D" parent="4Point" unique_id=757419970]
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_7344p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4Point" unique_id=948977083]
+shape = SubResource("CircleShape2D_yyxg5")
+
+[connection signal="body_entered" from="1Point" to="1Point" method="_on_body_entered"]
+[connection signal="body_entered" from="4Point" to="4Point" method="_on_body_entered"]
