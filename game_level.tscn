@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cc1dyjtc5bw3f" path="res://assets/laser (2).png" id="10_ssom1"]
 [ext_resource type="Texture2D" uid="uid://bl80y3unj05ln" path="res://assets/players/godot player5.png" id="11_gyjtv"]
 [ext_resource type="Texture2D" uid="uid://bxi3b80pup065" path="res://assets/godot freezetimer.png" id="16_3ktkq"]
-[ext_resource type="Script" uid="uid://dxero6m2lypla" path="res://freeze_timer.gd" id="17_gyjtv"]
+[ext_resource type="Script" uid="uid://dxero6m2lypla" path="res://scripts/freeze_timer.gd" id="17_gyjtv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emgcl"]
 size = Vector2(1181.5, 136)

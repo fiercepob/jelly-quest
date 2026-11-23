@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bwr64qki3ndya"]
+
+[ext_resource type="Texture2D" uid="uid://cho7l0pejti0f" path="res://assets/godot WAVE.png" id="1_015if"]
+[ext_resource type="Script" uid="uid://d4gcamg26yegn" path="res://scripts/waves.gd" id="1_uaif6"]
+[ext_resource type="Texture2D" uid="uid://ddyxa137i338d" path="res://assets/godot wave warning.png" id="3_c2vev"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uaif6"]
+radius = 66.0
+height = 238.0
+
+[node name="Waves" type="Area2D" unique_id=1774164600]
+script = ExtResource("1_uaif6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1456658804]
+position = Vector2(-30, 9)
+shape = SubResource("CapsuleShape2D_uaif6")
+
+[node name="wave" type="Sprite2D" parent="." unique_id=1194132946]
+scale = Vector2(0.77777797, 0.7777779)
+texture = ExtResource("1_015if")
+
+[node name="warning" type="Sprite2D" parent="." unique_id=1368549408]
+position = Vector2(49, 365)
+scale = Vector2(0.541918, 0.5419179)
+texture = ExtResource("3_c2vev")

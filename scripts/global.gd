@@ -8,9 +8,9 @@ var level = 0
 var points = 0
 var gameRunning = false
 var canRegen = false
-var verticalLaserChance = 0
 var playerSprite = 0
 var time = 0
+var warningHeatInterval = 0
 
 var pointSpawnRate = 0
 var goldPointChance = 0
@@ -30,12 +30,12 @@ var slamCooldownTimer = 0.0
 
 func reload_game():
 	level = 1
-	points = 0
+	points = 10000
 	gameRunning = false
 	canRegen = false
-	verticalLaserChance = 0.8
 	playerSprite = 1
 	time = 0
+	warningHeatInterval = 0.6
 
 	pointSpawnRate = 2
 	goldPointChance = 0
