@@ -86,13 +86,14 @@ func _on_lasers_body_entered(body: Node2D) -> void:
 			modulate = Color(1,1,1,i)
 			i -= 0.1
 func _on_waves_body_entered(body: Node2D) -> void:
-	set_physics_process(false)
-	Global.roundEnd.emit()
-	var i = 1.0
-	while i >= 0:
-		await get_tree().create_timer(0.05).timeout
-		modulate = Color(1,1,1,i)
-		i -= 0.1
+	if Global.canDieFromWave:
+		set_physics_process(false)
+		Global.roundEnd.emit()
+		var i = 1.0
+		while i >= 0:
+			await get_tree().create_timer(0.05).timeout
+			modulate = Color(1,1,1,i)
+			i -= 0.1
 
 func _process(delta):
 	if Global.playerSprite == 1:

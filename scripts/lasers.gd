@@ -3,9 +3,23 @@ extends Area2D
 var Interval = 0
 var xPos = 0
 var yPos = 0
-var laserLifetime = 0.8
+var laserLifetime = 0
 
 func _ready():
+	
+	if Global.level == 1:
+		Global.warningHeatInterval = 0.8
+		laserLifetime = 0.6
+	elif Global.level == 2:
+		Global.warningHeatInterval = 0.7
+		laserLifetime = 0.9
+	elif Global.level > 2 and Global.level < 7:
+		Global.warningHeatInterval = 0.6
+		laserLifetime = 1.2
+	else:
+		Global.warningHeatInterval = 0.4
+		laserLifetime = 1.5
+	
 	while true:
 		await get_tree().create_timer(Interval).timeout
 		xPos = randi_range(100,1090)

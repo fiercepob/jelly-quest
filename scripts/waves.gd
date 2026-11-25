@@ -1,10 +1,22 @@
 extends Area2D
 
-var waveSpeed = 5
+var waveSpeed = 0
 
 var i = randf()
 
 func _ready():
+	
+	if Global.level == 1:
+		waveSpeed = 5
+	elif Global.level == 2:
+		waveSpeed = 6
+	elif Global.level > 2 and Global.level < 7:
+		waveSpeed = 8
+	else:
+		waveSpeed = 10
+	
+	$wave.visible = false
+	Global.canDieFromWave = false
 	set_physics_process(false)
 	
 	if i < 0.5:
@@ -22,25 +34,25 @@ func _ready():
 	await get_tree().create_timer(Global.warningHeatInterval).timeout
 	$warning.visible = false
 	
-	set_physics_process(true)
-	
 	if i < 0.5:
-		position = Vector2(1300,393)
-		$wave.flip_h = false
-		$CollisionShape2D.position.x = -30
+		position = Vector2(1300,396)
 	else:
-		position = Vector2(-137,393)
-		$wave.flip_h = true
-		$CollisionShape2D.position.x = 30
+		position = Vector2(-137,396)
+	
+	$wave.visible = true
+	Global.canDieFromWave = true
+	set_physics_process(true)
 
 func _physics_process(delta):
 	if i < 0.5:
 		if position.x > -137:
 			position.x -= waveSpeed
+			rotation_degrees -= waveSpeed * 0.8
 		else:
 			queue_free()
 	else:
 		if position.x < 1300:
 			position.x += waveSpeed
+			rotation_degrees += waveSpeed * 0.8
 		else:
 			queue_free()

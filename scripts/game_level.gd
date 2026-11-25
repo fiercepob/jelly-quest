@@ -3,7 +3,7 @@ extends Node2D
 var point_scene = preload("res://point.tscn")
 var waves_scene = preload("res://waves.tscn")
 
-var waveSpawnInterval = 5
+var waveSpawnInterval = 0
 
 func _ready():
 	ready_two()
@@ -16,6 +16,13 @@ func _ready():
 func ready_two():
 	if Global.level == 1:
 		waveSpawnInterval = 23
+	elif Global.level == 2:
+		waveSpawnInterval = 7
+	elif Global.level > 2 and Global.level < 7:
+		waveSpawnInterval = 5
+	else:
+		waveSpawnInterval = 4
+	
 	while true:
 		await get_tree().create_timer(waveSpawnInterval).timeout
 		spawn_wave()

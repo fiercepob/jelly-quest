@@ -22,6 +22,7 @@ var canSlam = false
 var canFreeze = false
 var freezeTimer = 0.0
 var playerFrozen = false
+var canDieFromWave = false
 
 var freezeCooldown = 0
 var slamCooldown = 0
@@ -30,12 +31,12 @@ var slamCooldownTimer = 0.0
 
 func reload_game():
 	level = 1
-	points = 10000
+	points = 0
 	gameRunning = false
 	canRegen = false
 	playerSprite = 1
 	time = 0
-	warningHeatInterval = 0.6
+	warningHeatInterval = 0.7
 
 	pointSpawnRate = 2
 	goldPointChance = 0
@@ -47,6 +48,7 @@ func reload_game():
 	canFreeze = false
 	freezeTimer = 0.0
 	playerFrozen = false
+	canDieFromWave = false
 	
 	freezeCooldown = 3
 	slamCooldown = 3

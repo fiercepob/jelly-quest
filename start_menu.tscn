@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://xyqdur5vhadj" path="res://assets/players/godot player4.png" id="8_gfl6h"]
 [ext_resource type="Texture2D" uid="uid://bl80y3unj05ln" path="res://assets/players/godot player5.png" id="9_kefd2"]
 [ext_resource type="Texture2D" uid="uid://cybs7d0jorabn" path="res://assets/menu/godot tutorial button.png" id="11_gfl6h"]
-[ext_resource type="Texture2D" uid="uid://tv6c1meusku0" path="res://assets/menu/godot credits button.png" id="12_kefd2"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ctwoq"]
 points = PackedVector2Array(69, 42, 0, 84, 0, 0)
@@ -99,17 +98,6 @@ texture = ExtResource("11_gfl6h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutorialButton" unique_id=1725430807]
 position = Vector2(185, 459.75)
-shape = SubResource("RectangleShape2D_05c30")
-
-[node name="creditsButton" type="Area2D" parent="." unique_id=591350060]
-
-[node name="Sprite2D" type="Sprite2D" parent="creditsButton" unique_id=1764346986]
-position = Vector2(970.8343, 461.86346)
-scale = Vector2(1.0532637, 1.0532637)
-texture = ExtResource("12_kefd2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="creditsButton" unique_id=467190124]
-position = Vector2(967, 459.75)
 shape = SubResource("RectangleShape2D_05c30")
 
 [connection signal="mouse_entered" from="nextPlayer" to="." method="_on_next_player_mouse_entered"]
