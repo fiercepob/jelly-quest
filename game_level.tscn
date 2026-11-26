@@ -33,17 +33,17 @@ size = Vector2(1184, 19)
 [node name="gameLevel" type="Node2D" unique_id=1329617218]
 script = ExtResource("1_5d4hl")
 
-[node name="Background" type="Area2D" parent="." unique_id=2022900891]
+[node name="Background" type="Node2D" parent="." unique_id=1269499752]
 script = ExtResource("1_jpbmx")
 
 [node name="BG1" type="Sprite2D" parent="Background" unique_id=1077200112]
-position = Vector2(584, 306)
+position = Vector2(584, 322)
 scale = Vector2(1.5936279, 1.3236111)
 texture = ExtResource("2_5d4hl")
 
 [node name="BG2" type="Sprite2D" parent="Background" unique_id=645691471]
 visible = false
-position = Vector2(584, 306)
+position = Vector2(584, 322)
 scale = Vector2(1.594, 1.324)
 texture = ExtResource("3_dv4fs")
 

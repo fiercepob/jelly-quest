@@ -19,3 +19,6 @@ func _process(delta):
 		$FreezeCooldown/Label.text = str(snapped(Global.freezeCooldownTimer,0.1))
 	else:
 		$FreezeCooldown.visible = false
+		
+	if Global.level == 10:
+		$PointsDisplay.visible = false

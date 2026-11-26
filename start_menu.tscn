@@ -104,3 +104,5 @@ shape = SubResource("RectangleShape2D_05c30")
 [connection signal="mouse_exited" from="nextPlayer" to="." method="_on_next_player_mouse_exited"]
 [connection signal="mouse_entered" from="previousPlayer" to="." method="_on_previous_player_mouse_entered"]
 [connection signal="mouse_exited" from="previousPlayer" to="." method="_on_previous_player_mouse_exited"]
+[connection signal="mouse_entered" from="tutorialButton" to="." method="_on_tutorial_button_mouse_entered"]
+[connection signal="mouse_exited" from="tutorialButton" to="." method="_on_tutorial_button_mouse_exited"]

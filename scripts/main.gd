@@ -1,6 +1,7 @@
 extends Node2D
 
 var game_level_scene = preload("res://game_level.tscn")
+var bossfight_level_scene = preload("res://bossfight_level.tscn")
 var shop_scene = preload("res://shop.tscn")
 
 func _ready():
@@ -10,7 +11,11 @@ func _ready():
 
 func round_start():
 	Global.gameRunning = true
-	var game_level = game_level_scene.instantiate()
+	var game_level
+	if Global.level == 10:
+		game_level = bossfight_level_scene.instantiate()
+	else:
+		game_level = game_level_scene.instantiate()
 	add_child(game_level)
 
 func round_end():

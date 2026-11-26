@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dwdt3diiwn4aa"]
+
+[ext_resource type="Script" uid="uid://b50l2mnnjmwk5" path="res://scripts/tutorial.gd" id="1_bhfnd"]
+[ext_resource type="Texture2D" uid="uid://bqnbllly5v62s" path="res://assets/menu/tutorial slides/godot tutorial slide 1.png" id="2_tvjhf"]
+[ext_resource type="Texture2D" uid="uid://bwa77ctx3vn3n" path="res://assets/menu/tutorial slides/godot tutorial slide 2.png" id="3_vmw6g"]
+[ext_resource type="Texture2D" uid="uid://cijcpe6x0dsuq" path="res://assets/menu/tutorial slides/godot tutorial slide 3.png" id="4_4hjyh"]
+[ext_resource type="Texture2D" uid="uid://dyoobnikqqnjw" path="res://assets/menu/tutorial slides/godot tutorial slide 3 (1).png" id="5_bsk3x"]
+[ext_resource type="Texture2D" uid="uid://bu350yva03yy5" path="res://assets/menu/tutorial slides/godot tutorial slide 3 (2).png" id="6_dl7dh"]
+[ext_resource type="Texture2D" uid="uid://b568ojjiq8qdo" path="res://assets/menu/tutorial slides/godot tutorial slide 6.png" id="7_r4o0u"]
+[ext_resource type="Texture2D" uid="uid://bwjs8hsoyuhkb" path="res://assets/menu/tutorial slides/godot tutorial slide 7.png" id="8_k08xv"]
+[ext_resource type="Texture2D" uid="uid://b6lsudeugvtba" path="res://assets/menu/tutorial slides/godot tutorial slide 8.png" id="9_g52lx"]
+[ext_resource type="Texture2D" uid="uid://diyknjsielyfy" path="res://assets/menu/tutorial slides/godot tutorial slide 8 (1).png" id="10_0lped"]
+
+[node name="tutorial" type="Node2D" unique_id=1340986887]
+script = ExtResource("1_bhfnd")
+
+[node name="slide1" type="Sprite2D" parent="." unique_id=1300389739]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_tvjhf")
+
+[node name="slide2" type="Sprite2D" parent="." unique_id=99297846]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_vmw6g")
+
+[node name="slide3" type="Sprite2D" parent="." unique_id=209274592]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_4hjyh")
+
+[node name="slide4" type="Sprite2D" parent="." unique_id=1025485812]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5_bsk3x")
+
+[node name="slide5" type="Sprite2D" parent="." unique_id=1437431844]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("6_dl7dh")
+
+[node name="slide6" type="Sprite2D" parent="." unique_id=686012814]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_r4o0u")
+
+[node name="slide7" type="Sprite2D" parent="." unique_id=715373099]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("8_k08xv")
+
+[node name="slide8" type="Sprite2D" parent="." unique_id=241802717]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("9_g52lx")
+
+[node name="slide9" type="Sprite2D" parent="." unique_id=178533572]
+visible = false
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("10_0lped")
