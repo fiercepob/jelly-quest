@@ -23,6 +23,7 @@ var canFreeze = false
 var freezeTimer = 0.0
 var playerFrozen = false
 var canDieFromWave = false
+var canDieFromFloatingBall = false
 
 var freezeCooldown = 0
 var slamCooldown = 0
@@ -49,6 +50,7 @@ func reload_game():
 	freezeTimer = 0.0
 	playerFrozen = false
 	canDieFromWave = false
+	canDieFromFloatingBall = false
 	
 	freezeCooldown = 3
 	slamCooldown = 3

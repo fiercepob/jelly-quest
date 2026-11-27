@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8v3i"]
 radius = 122.0041
 
-[node name="Waves" type="Area2D" unique_id=1774164600]
+[node name="waves" type="Area2D" unique_id=1774164600]
 script = ExtResource("1_uaif6")
 
 [node name="wave" type="Sprite2D" parent="." unique_id=1194132946]
